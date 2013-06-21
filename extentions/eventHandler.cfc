@@ -23,7 +23,7 @@ component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=
       if(!structKeyExists(application, "Sentry")) {
         var sentryConfig = new Sentry.config.SentryConfig(variables.pluginConfig.getSetting('SentryDSN'));
         
-        application.SentryRavenClient = new Sentry.Client.Raven(argumentCollection=sentryConfig.getRavenConfiguration());
+        application.SentryRavenClient = new Sentry.client.Raven(argumentCollection=sentryConfig.getRavenConfiguration());
       }
       
       // Track Exception w/ Raven to report to Sentry
