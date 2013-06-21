@@ -4,14 +4,17 @@ component accessors=true extends='mura.plugin.plugincfc' output=false {
 
 	public void function install() {
 		// Do custom installation stuff
+		super.install();
 	}
 	
 	public void function update() {
 		// Do custom update stuff
+		super.update();
 	}
 
 	public void function delete() {
 		// Do custom delete stuff
+		super.delete();
 	}
 
 	// public void function toBundle(pluginConfig, bundle, siteid) output=false {

@@ -9,10 +9,6 @@
   Default configuration for MuraSentry.
 */
 component accessors=true {
-
-  // -------------------------------------------------------------------------
-  // BASIC SENTRY SETTINGS (required)
-  // -------------------------------------------------------------------------
   
   // Sentry DSN
   property name='Sentry_DSN'         type='string' default='';
@@ -29,9 +25,6 @@ component accessors=true {
   // Sentry Server
   property name='Sentry_Server'      type='string' default='';
 
-  // -------------------------------------------------------------------------
-  // Constructor
-  // -------------------------------------------------------------------------
   public function init(string dsn)
   {
     SetSentry_DSN(arguments.dsn);
