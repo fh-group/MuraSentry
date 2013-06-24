@@ -1,10 +1,10 @@
 <cfoutput>
 	<plugin>
 		<name>MuraSentry</name>
-		<package>mura-sentry</package>
+		<package>MuraSentry</package>
 		<directoryFormat>packageOnly</directoryFormat>
 		<loadPriority>5</loadPriority>
-		<version>0.1</version>
+		<version>1.0.0</version>
 		<provider>fh group</provider>
 		<providerURL>http://www.fh-group.com</providerURL>
 		<category>Utility</category>

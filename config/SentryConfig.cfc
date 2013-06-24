@@ -27,7 +27,8 @@ component accessors=true {
 
   public function init(string dsn)
   {
-    SetSentry_DSN(arguments.dsn);
+    writeDump(this);
+    this.Sentry_DSN = arguments.dsn;
 
     var parsedDSN = parseUri(this.Sentry_DSN);
 
@@ -50,7 +51,7 @@ component accessors=true {
 
   // parseUri CF v0.2, by Steven Levithan: http://stevenlevithan.com
   public struct function parseUri(string sourceUri) {
-    var uriPartNames = listToArray("source,protocol,authority,userInfo,user,password,host,port,relative,path,directory,file,query,anchor";
+    var uriPartNames = listToArray("source,protocol,authority,userInfo,user,password,host,port,relative,path,directory,file,query,anchor");
     var uriParts = reFind("^(?:(?![^:@]+:[^:@/]*@)([^:/?##.]+):)?(?://)?((?:(([^:@]*):?([^:@]*))?@)?([^:/?##]*)(?::(\d*))?)(((/(?:[^?##](?![^?##/]*\.[^?##/.]+(?:[?##]|$)))*/?)?([^?##/]*))(?:\?([^##]*))?(?:##(.*))?)", sourceUri, 1, TRUE);
     var uri = StructNew();
     var i = 1;
@@ -82,7 +83,7 @@ component accessors=true {
         the way reFind() considers an optional capturing group that does not match anything to have a pos of 0.
       */
 
-      if( ArrayLen(variables.uriParts.pos) > 1 && uriParts.pos[i] > 0){
+      if( ArrayLen(uriParts.pos) > 1 && uriParts.pos[i] > 0){
         uri[uriPartNames[i]] = mid(sourceUri, uriParts.pos[i], uriParts.len[i]);
       }else{
         uri[uriPartNames[i]] = ""
