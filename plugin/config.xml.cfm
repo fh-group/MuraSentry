@@ -1,11 +1,11 @@
 <cfoutput>
 	<plugin>
 		<name>MuraSentry</name>
-		<package>MuraSentry</package>
+		<package>mura-sentry</package>
 		<directoryFormat>packageOnly</directoryFormat>
 		<loadPriority>5</loadPriority>
 		<version>0.1</version>
-		<provider>Alexander Ambrose (fh group)</provider>
+		<provider>fh group</provider>
 		<providerURL>http://www.fh-group.com</providerURL>
 		<category>Utility</category>
 		<mappings>
@@ -19,6 +19,7 @@
 				your plugin is installed, so the above example would
 				refer to: {context}/plugins/{packageName}/someDirectory/anotherDirectory/
 			-->
+			<mapping name="Sentry" directory="" />
 		</mappings>
 
 		<!--
@@ -75,7 +76,7 @@
 		<eventHandlers>
 			<eventHandler 
 				event="onApplicationLoad" 
-				component="extensions.eventHandler" 
+				component="eventHandler" 
 				persist="false" />
 		</eventHandlers>
 

@@ -2,8 +2,8 @@
 <cfsavecontent variable="body">
 	<cfoutput>
 		<style type="text/css">
-			#bodyWrap h3{padding-top:1em;}
-			#bodyWrap ul{padding:0 0.75em;margin:0 0.75em;}
+			##bodyWrap h3{padding-top:1em;}
+			##bodyWrap ul{padding:0 0.75em;margin:0 0.75em;}
 		</style>
 		<div id="bodyWrap">
 			<h1>#HTMLEditFormat(pluginConfig.getName())#</h1>

@@ -1,4 +1,4 @@
-component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=false {
+component name='eventHandler' accessors='true' extends='mura.plugin.pluginGenericEventHandler' output='false' {
 
   property name='$';
 
@@ -21,9 +21,9 @@ component accessors=true extends='mura.plugin.pluginGenericEventHandler' output=
   public void function onGlobalError() {
     try {
       if(!structKeyExists(application, "Sentry")) {
-        var sentryConfig = new Sentry.config.SentryConfig(variables.pluginConfig.getSetting('SentryDSN'));
+        var sentryConfig = new MuraSentry.config.SentryConfig(variables.pluginConfig.getSetting('SentryDSN'));
         
-        application.SentryRavenClient = new Sentry.client.Raven(argumentCollection=sentryConfig.getRavenConfiguration());
+        application.SentryRavenClient = new MuraSentry.client.Raven(argumentCollection=sentryConfig.getRavenConfiguration());
       }
       
       // Track Exception w/ Raven to report to Sentry
