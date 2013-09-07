@@ -1,6 +1,6 @@
 /*
   Alexander Ambrose
-  fh group (2013) 
+  fh group (2013)
   http://www.fh-group.com/
 
   This work is licensed under a Creative Commons Attribution-Share-Alike 3.0
@@ -9,7 +9,7 @@
   Default configuration for MuraSentry.
 */
 component accessors=true {
-  
+
   // Sentry DSN
   property name='Sentry_DSN'         type='string' default='';
 
@@ -56,7 +56,7 @@ component accessors=true {
     var uri = StructNew();
     var i = 1;
 
-    /* 
+    /*
     Add the following keys to the uri struct:
     - source (the full, original URI)
     - protocol (scheme)
@@ -86,12 +86,12 @@ component accessors=true {
       if( ArrayLen(uriParts.pos) > 1 && uriParts.pos[i] > 0){
         uri[uriPartNames[i]] = mid(sourceUri, uriParts.pos[i], uriParts.len[i]);
       }else{
-        uri[uriPartNames[i]] = ""
+        uri[uriPartNames[i]] = "";
       }
     }
 
-    <!--- Always end directory with a trailing backslash if a path was present in the source URI.
-    Note that a trailing backslash is NOT automatically inserted within or appended to the relative or path parts --->
+    /* Always end directory with a trailing backslash if a path was present in the source URI.
+    Note that a trailing backslash is NOT automatically inserted within or appended to the relative or path parts */
     if( len(uri.directory) > 0){
       uri.directory = reReplace(uri.directory, "/?$", "/");
     }

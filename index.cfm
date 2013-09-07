@@ -11,8 +11,9 @@
 
 			<h3>Tested With</h3>
 			<ul>
-				<li>Mura CMS Core Version <strong>6.0+</strong></li>
+				<li>Mura CMS Core Version <strong>5.6+</strong></li>
 				<li>Railo <strong>4.0.4</strong></li>
+				<li>Adobe ColdFusion <strong>9</strong></li>
 			</ul>
 		</div>
 	</cfoutput>
