@@ -6,8 +6,9 @@ This plugin allows you to report errors within Mura to the Sentry error collecto
 Alexander Ambrose (fh group) - al3xnull
 
 ##Tested With
-* Mura CMS Core Version 6.0+
+* Mura CMS Core Version 5.6+
 * Railo 4.0.4
+* Adobe ColdFusion 9
 
 
 ##License
