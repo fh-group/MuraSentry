@@ -90,8 +90,8 @@ component accessors=true {
       }
     }
 
-    <!--- Always end directory with a trailing backslash if a path was present in the source URI.
-    Note that a trailing backslash is NOT automatically inserted within or appended to the relative or path parts --->
+    /* Always end directory with a trailing backslash if a path was present in the source URI.
+    Note that a trailing backslash is NOT automatically inserted within or appended to the relative or path parts */
     if( len(uri.directory) > 0){
       uri.directory = reReplace(uri.directory, "/?$", "/");
     }
